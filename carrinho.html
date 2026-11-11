@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PetShop Minac - Meu Carrinho</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+
+    <!-- Header / Cabeçalho -->
+    <header class="site-header">
+        <div class="logo-container">
+            <a href="index.html">
+                <img src="img/logo.jpg" width="250" alt="Logo PetShop Minac" class="site-logo">
+            </a>
+        </div>
+        <div class="search-container">
+            <input type="text" id="busca" placeholder="O que seu pet precisa hoje?" aria-label="Pesquisar produtos">
+        </div>
+        <div class="user-actions">
+            <a href="#" aria-label="Minha Conta">Perfil</a>
+            <a href="#" aria-label="Favoritos">❤️</a>
+            <a href="carrinho.html" aria-label="Carrinho de Compras" class="cart-link">🛒 <span
+                    id="cart-count">0</span></a>
+        </div>
+    </header>
+
+    <!-- Menu de Navegação -->
+    <nav class="site-nav">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="#">Cães</a></li>
+            <li><a href="#">Gatos</a></li>
+            <li><a href="#">Rações</a></li>
+            <li><a href="#">Brinquedos</a></li>
+            <li><a href="#">Minha Conta</a></li>
+        </ul>
+    </nav>
+
+    <!-- Conteúdo do Carrinho -->
+    <main class="container">
+        <h2 class="section-title">Meu Carrinho</h2>
+        <div style="display: flex; gap: 30px; flex-wrap: wrap; margin-top: 20px;">
+
+            <!-- Tabela de Produtos -->
+            <div style="flex: 2; min-width: 300px;">
+                <table
+                    style="width: 100%; border-collapse: collapse; background: white; border: 1px solid var(--border-color); border-radius: 4px;">
+                    <thead>
+                        <tr
+                            style="background-color: var(--bg-rose); text-align: left; border-bottom: 1px solid var(--border-color);">
+                            <th style="padding: 12px;">Produto</th>
+                            <th style="padding: 12px;">Quantidade</th>
+                            <th style="padding: 12px;">Subtotal</th>
+                            <th style="padding: 12px; text-align: center;">Ação</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr style="border-bottom: 1px solid var(--border-color);">
+                            <td style="padding: 12px; display: flex; align-items: center; gap: 10px;">
+                                <span>Ração Premium Cães 15kg</span>
+                            </td>
+                            <td style="padding: 12px;"><input type="number" value="1" min="1"
+                                    style="width: 50px; padding: 5px;"></td>
+                            <td style="padding: 12px;">R$ 189,90</td>
+                            <td style="padding: 12px; text-align: center;"><button
+                                    style="background: none; border: none; cursor: pointer; color: #a94442;">🗑️</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="padding: 12px; display: flex; align-items: center; gap: 10px;">
+                                <span>Brinquedo Mordedor Interativo</span>
+                            </td>
+                            <td style="padding: 12px;"><input type="number" value="2" min="1"
+                                    style="width: 50px; padding: 5px;"></td>
+                            <td style="padding: 12px;">R$ 59,80</td>
+                            <td style="padding: 12px; text-align: center;"><button
+                                    style="background: none; border: none; cursor: pointer; color: #a94442;">🗑️</button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- Resumo da Compra -->
+            <div
+                style="flex: 1; min-width: 250px; background-color: var(--bg-rose); padding: 20px; border-radius: 6px; border: 1px solid var(--border-color); height: fit-content;">
+                <h3 style="color: var(--primary-bordeaux); margin-bottom: 15px; font-size: 16px;">Resumo da Compra</h3>
+                <p style="display: flex; justify-content: space-between; margin-bottom: 8px;"><span>Subtotal:</span>
+                    <strong>R$ 249,70</strong>
+                </p>
+                <p style="display: flex; justify-content: space-between; margin-bottom: 8px;"><span>Frete:</span>
+                    <strong>R$ 20,00</strong>
+                </p>
+                <p style="font-size: 11px; color: #666; margin-bottom: 15px;">*Frete grátis para retirada na loja</p>
+                <hr style="border: 0; border-top: 1px solid var(--border-color); margin-bottom: 15px;">
+                <p
+                    style="display: flex; justify-content: space-between; margin-bottom: 20px; font-size: 18px; color: var(--primary-bordeaux);">
+                    <span>Total:</span> <strong>R$ 269,70</strong>
+                </p>
+
+                <a href="checkout.html"><button class="btn-primary"
+                        style="width: 100%; margin-bottom: 10px; cursor: pointer;">Finalizar Compra</button></a>
+                <a href="index.html"><button
+                        style="width: 100%; background: transparent; border: 1px solid var(--primary-bordeaux); color: var(--primary-bordeaux); padding: 10px; border-radius: 4px; cursor: pointer; font-weight: bold;">Continuar
+                        Comprando</button></a>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- Rodapé -->
+    <footer class="site-footer">
+        <ul>
+            <li><a href="#">Sobre Nós</a></li>
+            <li><a href="#">Política de Entrega</a></li>
+            <li><a href="#">Trocas e Devoluções</a></li>
+            <li><a href="#">Contato (WhatsApp)</a></li>
+            <li><a href="#">Privacidade</a></li>
+        </ul>
+    </footer>
+</body>
+</html>

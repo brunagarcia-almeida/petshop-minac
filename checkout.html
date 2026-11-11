@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PetShop Minac - Finalizar Compra</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+
+    <!-- Header / Cabeçalho -->
+    <header class="site-header">
+        <div class="logo-container">
+            <a href="index.html">
+                <img src="img/logo.jpg" width="250" alt="Logo PetShop Minac" class="site-logo">
+            </a>
+        </div>
+        <div class="search-container">
+            <input type="text" id="busca" placeholder="O que seu pet precisa hoje?" aria-label="Pesquisar produtos">
+        </div>
+        <div class="user-actions">
+            <a href="#" aria-label="Minha Conta">Perfil</a>
+            <a href="#" aria-label="Favoritos">❤️</a>
+            <a href="carrinho.html" aria-label="Carrinho de Compras" class="cart-link">🛒 <span
+                    id="cart-count">0</span></a>
+        </div>
+    </header>
+
+    <!-- Menu de Navegação -->
+    <nav class="site-nav">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="#">Cães</a></li>
+            <li><a href="#">Gatos</a></li>
+            <li><a href="#">Rações</a></li>
+            <li><a href="#">Brinquedos</a></li>
+            <li><a href="#">Minha Conta</a></li>
+        </ul>
+    </nav>
+
+    <!-- Conteúdo do Checkout -->
+    <main class="container">
+        <h2 class="section-title">Finalizar Compra</h2>
+
+        <div style="display: flex; gap: 30px; flex-wrap: wrap; margin-top: 20px;">
+            <!-- Formulário de Dados e Endereço -->
+            <div
+                style="flex: 2; min-width: 300px; background: white; padding: 25px; border: 1px solid var(--border-color); border-radius: 4px;">
+                <h3 style="color: var(--primary-bordeaux); margin-bottom: 15px; font-size: 16px;">Dados do Cliente e
+                    Entrega</h3>
+
+                <form style="display: flex; flex-direction: column; gap: 12px;">
+                    <div>
+                        <label for="nome"
+                            style="display: block; font-size: 13px; margin-bottom: 4px; font-weight: bold;">Nome
+                            Completo</label>
+                        <input type="text" id="nome" required
+                            style="width: 100%; padding: 8px; border: 1px solid var(--border-color); border-radius: 4px;">
+                    </div>
+
+                    <div style="display: flex; gap: 10px;">
+                        <div style="flex: 1;">
+                            <label for="cpf"
+                                style="display: block; font-size: 13px; margin-bottom: 4px; font-weight: bold;">CPF</label>
+                            <input type="text" id="cpf" placeholder="000.000.000-00" required
+                                style="width: 100%; padding: 8px; border: 1px solid var(--border-color); border-radius: 4px;">
+                        </div>
+                        <div style="flex: 1;">
+                            <label for="cep"
+                                style="display: block; font-size: 13px; margin-bottom: 4px; font-weight: bold;">CEP</label>
+                            <input type="text" id="cep" placeholder="00000-000" required
+                                style="width: 100%; padding: 8px; border: 1px solid var(--border-color); border-radius: 4px;">
+                        </div>
+                    </div>
+
+                    <div style="display: flex; gap: 10px;">
+                        <div style="flex: 1;">
+                            <label for="email"
+                                style="display: block; font-size: 13px; margin-bottom: 4px; font-weight: bold;">E-mail
+                                (Opcional)</label>
+                            <input type="email" id="email"
+                                style="width: 100%; padding: 8px; border: 1px solid var(--border-color); border-radius: 4px;">
+                        </div>
+                        <div style="flex: 1;">
+                            <label for="telefone"
+                                style="display: block; font-size: 13px; margin-bottom: 4px; font-weight: bold;">Telefone
+                                (Opcional)</label>
+                            <input type="tel" id="telefone"
+                                style="width: 100%; padding: 8px; border: 1px solid var(--border-color); border-radius: 4px;">
+                        </div>
+                    </div>
+
+                    <div>
+                        <label for="endereco"
+                            style="display: block; font-size: 13px; margin-bottom: 4px; font-weight: bold;">Endereço</label>
+                        <input type="text" id="endereco" required
+                            style="width: 100%; padding: 8px; border: 1px solid var(--border-color); border-radius: 4px;">
+                    </div>
+
+                    <div style="margin-top: 5px;">
+                        <label style="display: flex; align-items: center; gap: 8px; font-size: 14px; cursor: pointer;">
+                            <input type="checkbox" id="retirada"> Retirar na loja (Isento de frete - R$ 0,00)
+                        </label>
+                    </div>
+                </form>
+            </div>
+
+            <!-- Seleção de Pagamento e Confirmação -->
+            <div
+                style="flex: 1; min-width: 280px; background-color: var(--bg-rose); padding: 25px; border-radius: 6px; border: 1px solid var(--border-color); height: fit-content;">
+                <h3 style="color: var(--primary-bordeaux); margin-bottom: 15px; font-size: 16px;">Pagamento</h3>
+
+                <p style="margin-bottom: 15px; font-size: 14px; display: flex; justify-content: space-between;">
+                    <span>Total do Pedido:</span> <strong>R$ 269,70</strong>
+                </p>
+
+                <div style="display: flex; flex-direction: column; gap: 10px; margin-bottom: 20px;">
+                    <label
+                        style="display: flex; align-items: center; gap: 8px; font-size: 14px; font-weight: bold; cursor: pointer;">
+                        <input type="radio" name="pagamento" checked> Cartão de Crédito
+                    </label>
+                    <div
+                        style="background: white; padding: 10px; border-radius: 4px; border: 1px solid var(--border-color); display: flex; flex-direction: column; gap: 8px;">
+                        <input type="text" placeholder="Número do Cartão"
+                            style="padding: 6px; border: 1px solid #ccc; border-radius: 3px; font-size: 12px;">
+                        <div style="display: flex; gap: 5px;">
+                            <input type="text" placeholder="MM/AA"
+                                style="width: 50%; padding: 6px; border: 1px solid #ccc; border-radius: 3px; font-size: 12px;">
+                            <input type="text" placeholder="CVV"
+                                style="width: 50%; padding: 6px; border: 1px solid #ccc; border-radius: 3px; font-size: 12px;">
+                        </div>
+                    </div>
+
+                    <label
+                        style="display: flex; align-items: center; gap: 8px; font-size: 14px; font-weight: bold; cursor: pointer; margin-top: 5px;">
+                        <input type="radio" name="pagamento"> Pix (Simulação)
+                    </label>
+                </div>
+
+                <button class="btn-primary" style="width: 100%; cursor: pointer;"
+                    onclick="alert('Compra simulada com sucesso! Pedido gerado.')">Confirmar Pedido</button>
+
+                <div style="margin-top: 15px;">
+                    <a href="carrinho.html"
+                        style="text-decoration: none; color: var(--primary-bordeaux); font-size: 14px; font-weight: bold;">
+                        ← Voltar para o Carrinho
+                    </a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Rodapé -->
+    <footer class="site-footer">
+        <ul>
+            <li><a href="#">Sobre Nós</a></li>
+            <li><a href="#">Política de Entrega</a></li>
+            <li><a href="#">Trocas e Devoluções</a></li>
+            <li><a href="#">Contato (WhatsApp)</a></li>
+            <li><a href="#">Privacidade</a></li>
+        </ul>
+    </footer>
+</body>
+</html>
