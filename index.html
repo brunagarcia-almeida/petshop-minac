@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,6 +8,7 @@
     <link rel="stylesheet" href="style.css">
     <script src="script.js" defer></script>
 </head>
+
 <body>
     <!-- Header / Cabeçalho (Limpo e Completo) -->
     <header class="site-header">
@@ -102,17 +104,8 @@
 
         <section style="margin-top: 40px;">
             <h3 class="section-title">Todos os Produtos</h3>
-            <div id="catalogo-geral" class="product-grid">
-                <!-- Aqui os guris farão o loop da API para renderizar os 15 produtos do JSON -->
-                <div
-                    style="background: white; border: 1px solid var(--border-color); border-radius: 6px; padding: 15px; width: 220px; display: flex; flex-direction: column; gap: 10px;">
-                    <div
-                        style="background: #f0f0f0; height: 140px; border-radius: 4px; display: flex; align-items: center; justify-content: center; font-size: 12px; color: #666;">
-                        Exemplo Catálogo</div>
-                    <h4 style="font-size: 14px; color: var(--text-charcoal);">Antipulgas Bravecto</h4>
-                    <p style="font-size: 15px; font-weight: bold; color: var(--primary-bordeaux);">R$ 239,90</p>
-                    <button class="btn-primary" style="width: 100%; padding: 8px; font-size: 13px;">Comprar</button>
-                </div>
+            <div id="produtos-container" class="product-grid">
+                <!-- carregarProdutos() que vai montar o layout aqui dentro -->
             </div>
         </section>
     </main>
@@ -128,4 +121,5 @@
         </ul>
     </footer>
 </body>
+
 </html>
