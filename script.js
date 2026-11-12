@@ -25,7 +25,9 @@ async function carregarProdutos() {
             containerProdutos.innerHTML += cardHtml;
         });
     } catch (error) {
-        console.log("Algo de errado não está certo.", error);
+        //console.log("Algo de errado não está certo.", error);
+        //alert("Deu ruim");
+        containerProdutos.innerHTML = 'Não foi possível carregar os produtos..'
     }
 }
 carregarProdutos();
