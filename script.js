@@ -4,6 +4,12 @@
 const containerProdutos = document.querySelector('#produtos-container');
 var produtos = [];
 
+// Usar essa função para carregar os destaques na tela. 
+// API: https://fakestoreapi.com/products
+async function carregarDestaquesAPI() {
+
+}
+
 async function carregarProdutos() {
     try {
         const resposta = await fetch('produtos.json');
