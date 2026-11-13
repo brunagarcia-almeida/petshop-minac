@@ -34,10 +34,13 @@ function filtrarPorCategoria(categoriaEscolhida) {
     criarCardProduto(produtosFiltrados);
 }
 
-function filtrarPorNome(pesquisa){
-    //const texto = pesquisa.toLowerCase(); //minusculo
-    console.log(pesquisa);
-    const produtosPesquisados = produtos.filter(produto => produto.title?.toLowerCase().includes(pesquisa));
+function filtrarPorNome(pesquisa) {
+    const texto = pesquisa.toLowerCase(); 
+
+    const produtosPesquisados = produtos.filter(produto => 
+        produto.title?.toLowerCase().includes(texto)
+    );
+
     criarCardProduto(produtosPesquisados);
 }
 
