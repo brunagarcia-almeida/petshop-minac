@@ -28,6 +28,12 @@ function filtrarPorCategoria(categoriaEscolhida) {
     criarCardProduto(produtosFiltrados);
 }
 
+function filtrarPorNome(pesquisa){
+    const texto = pesquisa.toLowerCase();
+    const produtosPesquisados = produtos.filter(produto => produto.title.toLowerCase().includes(texto));
+    criarCardProduto(produtosPesquisados);
+}
+
 function criarCardProduto(listaProdutos){
     containerProdutos.innerHTML =  '';
 
