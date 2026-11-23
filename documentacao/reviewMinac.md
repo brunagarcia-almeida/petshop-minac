@@ -5,4 +5,4 @@
 - Trocar API de fake store por API de imagens aleatórias ou usar a API interna
 - Conteúdo de acessibilidade
 - Testes de software baseado no documento de requisitos
-- Atividade: 5 CASOS DE TESTE DO PETSHOP MINAC (documentados no padrão do slide - os 5 no mesmo DOC).
+- Atividade: 5 CASOS DE TESTE DO PETSHOP MINAC (documentados no padrão do slide - os 5 no mesmo DOC), com relatório de bugs dos mesmos 5.
